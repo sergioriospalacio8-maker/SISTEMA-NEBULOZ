@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nebuloz | Espacio de Trabajo</title>
+
+    <link rel="stylesheet" href="./styles./styles.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+          
+            <div class="logos-container">
+
+                <div class="logo-proyecto">
+                    <img src="./images/Logoproyecto.jpeg" alt="Logo SIPE">
+                </div>
+
+                <div class="logo-sena">
+                    <img src="./images/logo-del-sena-01.png" alt="Logo SENA">
+                </div>
+
+            </div>
+
+            <div class="project-info">
+
+                <h2>Nebuloz</h2>
+
+                <p>
+                    Sistema de Gestión de Préstamos
+                    y Monitoreo de Equipos Institucionales
+                </p>
+
+                <span class="project-status">
+                    <i class="fa-solid fa-circle"></i>
+                    Proyecto formativo
+                </span>
+
+            </div>
+
+            <nav class="navigation">
+
+                <p class="nav-title">MENÚ PRINCIPAL</p>
+
+                <a href="#inicio" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </a>
+
+                <a href="#documentos" class="nav-link">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Documentos</span>
+                </a>
+
+                <a href="#subir" class="nav-link">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <span>Subir documentos</span>
+                </a>
+
+                <a href="#integrantes" class="nav-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Integrantes</span>
+                </a>
+
+                <a href="#roles" class="nav-link">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <span>Roles del equipo</span>
+                </a>
+
+                <p class="nav-title">ADMINISTRACIÓN</p>
+
+                <a href="#administracion" class="nav-link">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Panel administrativo</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="user-details">
+                    <h4>Equipo Nebuloz</h4>
+                    <p>Ficha ADSO 3482268</p>
+                </div>
+
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <h2>Espacio de trabajo</h2>
+                        <p>Gestiona y organiza los documentos de tu proyecto</p>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="date-container">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span id="fechaActual"></span>
+                    </div>
+
+                    <div class="topbar-avatar">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <section id="inicio" class="welcome-section">
+
+                <div class="welcome-text">
+
+                    <span class="welcome-tag">
+                        <i class="fa-solid fa-rocket"></i>
+                        BIENVENIDOS AL EQUIPO
+                    </span>
+
+                    <h1>¡Hola, equipo Nebuloz!</h1>
+
+                    <p>
+                        Este es su espacio colaborativo para organizar,
+                        almacenar y consultar todos los documentos
+                        del proyecto formativo.
+                    </p>
+
+                    <a href="#subir" class="welcome-button">
+                        <i class="fa-solid fa-plus"></i>
+                        Agregar documento
+                    </a>
+
+                </div>
+
+                <div class="welcome-image">
+
+                    <i class="fa-solid fa-folder-tree"></i>
+
+                </div>
+
+            </section>
+
+            <section class="statistics-section">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon documents-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div class="stat-info">
+                        <p>Documentos guardados</p>
+                        <h3 id="totalDocumentos">0</h3>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon members-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stat-info">
+                        <p>Integrantes del equipo</p>
+                        <h3>5</h3>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon storage-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <div class="stat-info">
+                        <p>Espacio de trabajo</p>
+                        <h3>Nebuloz</h3>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="subir" class="upload-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Subir nuevo documento</h2>
+                        <p>Agrega los archivos correspondientes al proyecto</p>
+                    </div>
+
+                    <i class="fa-solid fa-cloud-arrow-up section-icon"></i>
+
+                </div>
+
+                <form id="formDocumento">
+
+                    <div class="form-group">
+
+                        <label for="nombreDocumento">
+                            Nombre del documento
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombreDocumento"
+                            placeholder="Ej: Planteamiento del problema"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="integranteDocumento">
+                            Elaborado por
+                        </label>
+
+                        <select id="integranteDocumento" required>
+
+                            <option value="">
+                                Seleccionar integrante
+                            </option>
+
+                            <option value="Valery Muñoz">
+                                Valery Muñoz
+                            </option>
+
+                            <option value="Anderson Zapata">
+                                Anderson Zapata
+                            </option>
+
+                            <option value="Matias Betancourth">
+                                Matias Betancourth
+                            </option>
+
+                            <option value="Sergio Rios">
+                                Sergio Rios
+                            </option>
+
+                            <option value="Juliana Parra">
+                                Juliana Parra
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="categoriaDocumento">
+                            Categoría del documento
+                        </label>
+
+                        <select id="categoriaDocumento" required>
+
+                            <option value="">
+                                Seleccionar categoría
+                            </option>
+
+                            <option value="Documentación">
+                                Documentación
+                            </option>
+
+                            <option value="Diseño">
+                                Diseño
+                            </option>
+
+                            <option value="Desarrollo">
+                                Desarrollo
+                            </option>
+
+                            <option value="Base de datos">
+                                Base de datos
+                            </option>
+
+                            <option value="Proyecto formativo">
+                                Proyecto formativo
+                            </option>
+
+                            <option value="Otros">
+                                Otros
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="archivoDocumento">
+                            Seleccionar archivo
+                        </label>
+
+                        <div class="file-upload">
+
+                            <input
+                                type="file"
+                                id="archivoDocumento"
+                                accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.jpg,.jpeg,.png,.zip"
+                                required
+                            >
+
+                            <i class="fa-solid fa-file-arrow-up"></i>
+
+                            <p>
+                                Selecciona o arrastra tu documento
+                            </p>
+
+                            <span>
+                                PDF, Word, Excel, PowerPoint, imágenes y ZIP
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="descripcionDocumento">
+                            Descripción del documento
+                        </label>
+
+                        <textarea
+                            id="descripcionDocumento"
+                            placeholder="Escribe una breve descripción..."
+                            rows="3"
+                        ></textarea>
+
+                    </div>
+
+                    <button type="submit" class="upload-button">
+
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                        Guardar documento
+
+                    </button>
+
+                </form>
+
+            </section>
+
+            <section id="documentos" class="documents-section">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Documentos guardados</h2>
+                        <p>Consulta los archivos de tu equipo de trabajo</p>
+                    </div>
+
+                    <i class="fa-solid fa-folder-open section-icon"></i>
+
+                </div>
+
+                <div class="search-container">
+
+                    <div class="search-input">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="buscarDocumento"
+                            placeholder="Buscar documento por nombre..."
+                        >
+
+                    </div>
+
+                    <select id="filtroIntegrante">
+
+                        <option value="Todos">
+                            Todos los integrantes
+                        </option>
+
+                        <option value="Valery Muñoz">
+                            Valery Muñoz
+                        </option>
+
+                        <option value="Anderson Zapata">
+                            Anderson Zapata
+                        </option>
+
+                        <option value="Matias Betancourth">
+                            Matias Betancourth
+                        </option>
+
+                        <option value="Sergio Rios">
+                            Sergio Rios
+                        </option>
+
+                        <option value="Juliana Parra">
+                            Juliana Parra
+                        </option>
+
+                    </select>
+
+                </div>
+
+             
+                <div id="listaDocumentos" class="documents-grid">
+                </div>
+
+            </section>
+
+            <section id="integrantes" class="team-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Integrantes del equipo</h2>
+                        <p>Conoce a los participantes del proyecto SIPE</p>
+                    </div>
+
+                    <i class="fa-solid fa-people-group section-icon"></i>
+
+                </div>
+
+                <div class="team-grid">
+
+                    <div class="team-card valery">
+
+                        <div class="team-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <h3>Valery Muñoz</h3>
+
+                        <span class="team-color">Integrante 01</span>
+
+                        <p class="team-role">
+                            <span>Rol:</span>
+                            <span id="rolValery">Por asignar</span>
+                        </p>
+
+                    </div>
+
+                    <div class="team-card anderson">
+
+                        <div class="team-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <h3>Anderson Zapata</h3>
+
+                        <span class="team-color">Integrante 02</span>
+
+                        <p class="team-role">
+                            <span>Rol:</span>
+                            <span id="rolAnderson">Por asignar</span>
+                        </p>
+
+                    </div>
+
+                    <div class="team-card matias">
+
+                        <div class="team-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <h3>Matias Betancourth</h3>
+
+                        <span class="team-color">Integrante 03</span>
+
+                        <p class="team-role">
+                            <span>Rol:</span>
+                            <span id="rolMatias">Por asignar</span>
+                        </p>
+
+                    </div>
+
+                    <div class="team-card sergio">
+
+                        <div class="team-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <h3>Sergio Rios</h3>
+
+                        <span class="team-color">Integrante 04</span>
+
+                        <p class="team-role">
+                            <span>Rol:</span>
+                            <span id="rolSergio">Por asignar</span>
+                        </p>
+
+                    </div>
+
+                    <div class="team-card juliana">
+
+                        <div class="team-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <h3>Juliana Parra</h3>
+
+                        <span class="team-color">Integrante 05</span>
+
+                        <p class="team-role">
+                            <span>Rol:</span>
+                            <span id="rolJuliana">Por asignar</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="roles" class="roles-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Administrar roles</h2>
+                        <p>Define las responsabilidades de cada integrante</p>
+                    </div>
+
+                    <i class="fa-solid fa-user-gear section-icon"></i>
+
+                </div>
+
+                <form id="formRoles">
+
+                    <div class="roles-grid">
+
+                        <div class="form-group">
+
+                            <label for="rolInputValery">
+                                Valery Muñoz
+                            </label>
+
+                            <input
+                                type="text"
+                                id="rolInputValery"
+                                placeholder="Ej: Analista"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="rolInputAnderson">
+                                Anderson Zapata
+                            </label>
+
+                            <input
+                                type="text"
+                                id="rolInputAnderson"
+                                placeholder="Ej: Desarrollador"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="rolInputMatias">
+                                Matias Betancourth
+                            </label>
+
+                            <input
+                                type="text"
+                                id="rolInputMatias"
+                                placeholder="Ej: Diseñador"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="rolInputSergio">
+                                Sergio Rios
+                            </label>
+
+                            <input
+                                type="text"
+                                id="rolInputSergio"
+                                placeholder="Ej: Líder del proyecto"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="rolInputJuliana">
+                                Juliana Parra
+                            </label>
+
+                            <input
+                                type="text"
+                                id="rolInputJuliana"
+                                placeholder="Ej: Documentadora"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="upload-button">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Guardar roles
+
+                    </button>
+
+                </form>
+
+            </section>
+
+            <section id="administracion" class="admin-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Panel administrativo</h2>
+                        <p>Resumen general del espacio de trabajo</p>
+                    </div>
+
+                    <i class="fa-solid fa-chart-line section-icon"></i>
+
+                </div>
+
+                <div class="admin-grid">
+
+                    <div class="admin-card">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                        <h3>Gestión documental</h3>
+
+                        <p>
+                            Administra, consulta y organiza
+                            los documentos del proyecto.
+                        </p>
+
+                    </div>
+
+                    <div class="admin-card">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                        <h3>Gestión de integrantes</h3>
+
+                        <p>
+                            Consulta los integrantes
+                            y sus responsabilidades.
+                        </p>
+
+                    </div>
+
+                    <div class="admin-card">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <h3>Control del proyecto</h3>
+
+                        <p>
+                            Mantén organizado el espacio
+                            de trabajo de SIPE.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer class="footer">
+
+                <div class="footer-logo">
+
+                    <img src="img/logo-sena.png" alt="SENA">
+
+                    <span>
+                        Servicio Nacional de Aprendizaje
+                    </span>
+
+                </div>
+
+                <p>
+                    Nebuloz | Proyecto Formativo ADSO
+                    <br>
+                    Ficha 3482268
+                </p>
+
+                <span class="footer-version">
+                    Espacio colaborativo
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
